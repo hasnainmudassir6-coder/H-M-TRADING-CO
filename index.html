@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H M Trading - Authorized Industrial Dealer in Cuttack, Odisha. Suppliers of SSAL Welding Electrodes, Turboflex V-Belts, and Engineering Materials.">
+    <title>H M Trading | Authorized Industrial Dealer & Stockist | Cuttack</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* INDUSTRIAL THEME CSS */
+        :root {
+            --primary: #1F2A44;      /* Industrial Navy */
+            --secondary: #243A73;    /* Brighter Navy */
+            --text-main: #2B2B2B;    /* Charcoal */
+            --text-light: #555555;   /* Grey */
+            --bg-white: #FFFFFF;
+            --bg-section: #F5F6F7;   /* Light Grey */
+            --border: #D1D5DB;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Roboto', sans-serif;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* UTILITIES */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background-color: var(--primary); }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+        .btn-outline:hover { background-color: white; color: var(--primary); }
+
+        .section-padding { padding: 60px 0; }
+        .bg-light { background-color: var(--bg-section); }
+
+        /* TOP BAR & HEADER */
+        .top-bar {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 0;
+            font-size: 13px;
+        }
+        .top-bar .container { display: flex; justify-content: space-between; }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center; height: 80px;
+        }
+        .logo {
+            font-size: 24px; font-weight: 700; color: var(--primary); text-transform: uppercase; border: 2px solid var(--primary); padding: 5px 10px;
+        }
+        nav ul { display: flex; gap: 30px; }
+        nav a { font-weight: 600; font-size: 14px; text-transform: uppercase; color: var(--primary); }
+
+        /* HERO */
+        .hero {
+            background-image: linear-gradient(rgba(31, 42, 68, 0.85), rgba(31, 42, 68, 0.75)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            height: 550px; display: flex; align-items: center; color: white;
+        }
+        .hero h1 { color: white; font-size: 42px; margin-bottom: 20px; max-width: 800px; }
+        .hero p { font-size: 18px; margin-bottom: 30px; max-width: 700px; color: #E0E0E0; }
+
+        /* DEALERSHIPS (GRID) */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: white; border: 1px solid var(--border); padding: 30px; height: 100%; }
+        .card h3 { border-bottom: 2px solid var(--bg-section); padding-bottom: 10px; margin-bottom: 15px; }
+        .card ul { list-style: disc; margin-left: 20px; color: var(--text-light); }
+        .card li { margin-bottom: 8px; }
+
+        /* SERVICES & INDUSTRIES */
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .industry-card { background: white; padding: 20px; border: 1px solid var(--border); text-align: center; }
+        
+        .service-list li {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        /* CONTACT */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 10px; border: 1px solid #ccc; font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* FOOTER */
+        footer { background-color: var(--primary); color: #ccc; padding: 40px 0 20px; font-size: 14px; }
+        footer h4 { color: white; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        footer a { color: white; text-decoration: underline; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .nav-container { flex-direction: column; height: auto; padding: 15px 0; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 15px; }
+            .grid-2, .grid-4, .contact-grid { grid-template-columns: 1fr; }
+            .top-bar .container { flex-direction: column; text-align: center; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span>GST: 21AQKPK3505A1ZM</span>
+            <span><a href="tel:+919937125323">Call: +91 9937125323</a> | <a href="mailto:aslam.hmtrading@gmail.com">aslam.hmtrading@gmail.com</a></span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">H M TRADING</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#dealerships">Authorized Brands</a></li>
+                    <li><a href="#products">Supply Range</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Industrial Trading & Authorized Dealership in Odisha</h1>
+            <p>Bridging the gap between manufacturers and end-users since 2014. Authorized stockist for SSAL Welding Electrodes, Turboflex Power Transmission, and Industrial Safety Gear.</p>
+            <div style="margin-top: 20px;">
+                <a href="#contact" class="btn">Request Quote</a>
+                <a href="#products" class="btn btn-outline">View Products</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2>About H M Trading Co.</h2>
+                    <p>Established in 2014 in Cuttack, Odisha, H M Trading Co. is a dedicated B2B supplier specializing in the procurement and distribution of industrial, electrical, and mechanical engineering materials.</p>
+                    <br>
+                    <p>We serve cement plants, EPC contractors, and infrastructure developers by ensuring seamless access to essential materials. Our operations focus on sourcing from trusted manufacturers to minimize delays and optimize costs for our partners.</p>
+                </div>
+                <div class="bg-light" style="padding: 20px; border-left: 5px solid var(--secondary);">
+                    <h3>Why Choose Us</h3>
+                    <ul style="list-style: none;">
+                        <li>✓ <strong>Proven Reliability:</strong> Sourcing from established manufacturers.</li>
+                        <li>✓ <strong>Efficient Supply Chain:</strong> Minimizing lead times for urgent requirements.</li>
+                        <li>✓ <strong>Local Expertise:</strong> Deep understanding of Odisha's industrial landscape.</li>
+                        <li>✓ <strong>Transparent Dealings:</strong> Clear documentation and GST compliance.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dealerships" class="section-padding bg-light">
+        <div class="container">
+            <h2 style="margin-bottom: 30px;">Authorized Channel Partners</h2>
+            <div class="grid-2">
+                
+                <div class="card">
+                    <h3>SSAL (Spectra Super Alloys Ltd)</h3>
+                    <p><strong>Welding Electrodes & Consumables</strong></p>
+                    <p>We are authorized dealers for SSAL, providing high-quality alloy welding solutions for maintenance and fabrication.</p>
+                    <br>
+                    <ul>
+                        <li>Specialized Welding Electrodes</li>
+                        <li>Super Alloy Consumables</li>
+                        <li>Maintenance Welding Solutions</li>
+                        <li>Hardfacing Electrodes</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>TURBOFLEX</h3>
+                    <p><strong>Power Transmission Solutions</strong></p>
+                    <p>Enabling performance with precision and durability. We stock genuine Turboflex power transmission products.</p>
+                    <br>
+                    <ul>
+                        <li>Industrial V-Belts (Wrapped & Cogged)</li>
+                        <li>Pulleys (Taper Lock & Solid)</li>
+                        <li>Flexible Couplings</li>
+                        <li>Timing Belts</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>DUCKBACK / UDYOGI / KARAM</h3>
+                    <p><strong>Industrial Safety (PPE)</strong></p>
+                    <p>Complete safety solutions for hazardous work environments and construction sites.</p>
+                    <br>
+                    <ul>
+                        <li>Industrial Rainwear (Duckback)</li>
+                        <li>Safety Shoes & Helmets (Udyogi)</li>
+                        <li>Fall Protection Harnesses (Karam)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>HERO RUBBER INDUSTRIES</h3>
+                    <p><strong>Hoses & Rubber Sheets</strong></p>
+                    <p>Durable rubber products for fluid transfer and industrial insulation.</p>
+                    <br>
+                    <ul>
+                        <li>High Pressure Hoses</li>
+                        <li>Rubber Sheets & Mats</li>
+                        <li>Conveyor Accessories</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section-padding">
+        <div class="container">
+            <h2>Comprehensive Supply Range</h2>
+            <p style="margin-bottom: 30px;">Beyond our authorized dealerships, we procure and supply the following categories:</p>
+            
+            <div class="grid-2">
+                <div>
+                    <h4>Electrical & Power Equipment</h4>
+                    <ul class="service-list">
+                        <li>HT/LT Cables and Wires</li>
+                        <li>Switchgear and Distribution Panels</li>
+                        <li>Industrial Transformers</li>
+                        <li>Lighting fixtures for plants</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Mechanical & Engineering</h4>
+                    <ul class="service-list">
+                        <li>Bearings and Plummer Blocks</li>
+                        <li>Industrial Valves and Pumps</li>
+                        <li>Structural Steel Components</li>
+                        <li>Fasteners (High Tensile)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Construction Materials</h4>
+                    <ul class="service-list">
+                        <li>Steel Reinforcements</li>
+                        <li>Cementitious Products</li>
+                        <li>Formwork Accessories</li>
+                        <li>Piping Systems</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Industrial Consumables</h4>
+                    <ul class="service-list">
+                        <li>Abrasives (Cutting/Grinding wheels)</li>
+                        <li>Industrial Lubricants & Greases</li>
+                        <li>Hand Tools & Power Tools</li>
+                        <li>General Workshop Supplies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+            <div class="grid-4" style="margin-top: 20px;">
+                <div class="industry-card">
+                    <h4>Cement Plants</h4>
+                    <p>MRO supplies for kilns, crushers, and conveyors.</p>
+                </div>
+                <div class="industry-card">
+                    <h4>Infrastructure</h4>
+                    <p>EPC contractors for roads, bridges, and urban projects.</p>
+                </div>
+                <div class="industry-card">
+                    <h4>Manufacturing</h4>
+                    <p>Production line support for factories and metalworks.</p>
+                </div>
+                <div class="industry-card">
+                    <h4>Utilities</h4>
+                    <p>Power sector equipment for grid expansion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                
+                <div>
+                    <div style="margin-bottom: 20px;">
+                        <strong>Head Office & Warehouse:</strong><br>
+                        H M Trading<br>
+                        Cuttack, Odisha, India<br>
+                        Pin: 753001
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <strong>Contact:</strong><br>
+                        Phone: <a href="tel:+919937125323" style="text-decoration: underline;">+91 9937125323</a><br>
+                        Email: <a href="mailto:aslam.hmtrading@gmail.com" style="text-decoration: underline;">aslam.hmtrading@gmail.com</a>
+                    </div>
+                    
+                    <div style="background: #eee; height: 250px; display: flex; align-items: center; justify-content: center; border: 1px solid #ccc;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59853.56846938928!2d85.8354!3d20.4625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190d83272210f7%3A0x2868a6ea230f371e!2sCuttack%2C%20Odisha!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="bg-light" style="padding: 30px; border: 1px solid var(--border);">
+                    <h3>Get a Price Quote</h3>
+                    <form id="quoteForm" onsubmit="sendEmail(event)">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Name *</label>
+                            <input type="text" id="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Product Interest</label>
+                            <select id="productType">
+                                <option>SSAL Welding Electrodes</option>
+                                <option>Turboflex V-Belts/Pulleys</option>
+                                <option>Duckback/Safety Gear</option>
+                                <option>Electrical/Power Items</option>
+                                <option>Other Consumables</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Requirements / Quantity</label>
+                            <textarea id="message" style="height: 100px;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Inquiry</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="grid-4" style="gap: 40px;">
+                <div style="grid-column: span 2;">
+                    <h4>H M Trading</h4>
+                    <p>Your trusted partner for industrial supplies in Eastern India. Committed to quality, authenticity, and timely delivery.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#dealerships">Dealerships</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <p>GST: 21AQKPK3505A1ZM</p>
+                    <p>© 2025 H M Trading.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function sendEmail(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const product = document.getElementById('productType').value;
+            const message = document.getElementById('message').value;
+
+            const emailBody = `Name: ${name}%0D%0ACompany: ${company}%0D%0AProduct: ${product}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            window.location.href = `mailto:aslam.hmtrading@gmail.com?subject=Inquiry: ${company}&body=${emailBody}`;
+        }
+    </script>
+
+</body>
+</html>
